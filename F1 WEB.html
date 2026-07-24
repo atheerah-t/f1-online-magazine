@@ -1,0 +1,4086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>F1 Magazine</title>
+
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Asap+Condensed:wght@400;500;600;700;800;900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:#111;
+    color:white;
+    overflow-x:hidden;
+}
+
+
+
+/* ================= NAVBAR ================= */
+
+
+.navbar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:70px;
+
+    background:#111;
+
+    display:flex;
+    align-items:center;
+
+    z-index:1000;
+
+    border-top:2px solid #1e90ff;
+
+}
+
+
+
+.logo{
+
+    margin-left:85px;
+
+    font-size:32px;
+    font-weight:900;
+    font-style:italic;
+
+    color:#555;
+
+    letter-spacing:-2px;
+transform:translateY(-3px);
+
+}
+
+
+
+.logo span{
+
+    color:#8b3030;
+
+}
+
+
+
+
+
+.nav-links{
+
+    display:flex;
+
+    margin-left:85px;
+
+    gap:60px;
+
+    height:100%;
+
+    align-items:center;
+
+}
+
+
+
+.nav-links a{
+
+    position:relative;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-13px;
+
+    left:0;
+
+    width:0;
+
+    height:5px;
+
+    background:#ed1c24;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#ff8f8f;
+
+}
+
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    height:100vh;
+
+    width:100%;
+
+    position:relative;
+
+    background-image:
+
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.35)
+    ),
+
+url("f1 home.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+.hero-content{
+
+    margin-left:85px;
+
+    margin-top:120px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:58px;
+
+    line-height:1.05;
+
+    font-style:italic;
+
+    font-weight:900;
+
+}
+
+
+
+.hero h1 span{
+
+    color:#d90000;
+
+}
+
+
+
+
+
+.hero p{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    color:#eee;
+
+}
+
+
+
+.explore-btn{
+
+    margin-top:30px;
+
+    display:inline-block;
+
+    padding:14px 18px;
+
+    background:#e10600;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    font-size:10px;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+}
+
+
+
+.explore-btn:hover{
+
+    background:white;
+
+    color:#e10600;
+
+}
+
+
+
+
+/* placeholder bawah */
+
+
+
+.nav-links a:hover,
+.nav-links a.active{
+
+    color:#e10600;
+
+}
+
+
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-12px;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:#e10600;
+
+    transition:0.35s ease;
+
+}
+
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+
+
+/* ================= EXPLORE BUTTON ================= */
+
+
+.explore-btn{
+
+    position:relative;
+
+    display:inline-block;
+
+    overflow:hidden;
+
+    background:#e10600;
+
+    color:white;
+
+    padding:14px 22px;
+
+    margin-top:30px;
+
+    border-radius:5px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+}
+
+
+
+.explore-btn:hover{
+
+    background:white;
+
+    color:#e10600;
+
+}
+
+
+
+/* ================= HERO ANIMATION ================= */
+
+
+.hero-content{
+
+    animation:slideUp 1s ease;
+
+}
+
+
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+
+@media(max-width:900px){
+
+
+.navbar{
+
+    padding:20px;
+
+}
+
+
+.logo{
+
+    margin-left:20px;
+
+}
+
+
+.nav-links{
+
+    gap:45px;
+
+    margin-left:90px;
+
+}
+
+
+
+.nav-links a{
+
+    font-size:16px;
+
+}
+
+
+.hero-content{
+
+    margin-left:40px;
+
+}
+
+
+.hero h1{
+
+    font-size:50px;
+
+}
+
+
+}
+
+
+@media(max-width:600px){
+
+
+.navbar{
+
+    flex-direction:column;
+
+    height:auto;
+
+}
+
+
+.nav-links{
+
+    margin-top:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+
+}
+
+/* ================= SEASON SECTION ================= */
+
+
+.season-section{
+
+    padding:30px 5%;
+
+    background:#111;
+
+}
+
+
+
+.section-title{
+	
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+	
+
+
+
+.red-line{
+
+    width:85px;
+
+    height:3px;
+
+    background:#e10600;
+
+    margin-top:12px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+
+
+.season-card{
+
+    display:flex;
+
+    height:300px;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+.season-image{
+
+    width:50%;
+
+}
+
+
+
+.season-image img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+
+
+
+
+.season-text{
+
+    width:50%;
+
+    padding:30px;
+
+}
+
+
+
+.season-text h1{
+
+    font-size:26px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.season-text p{
+
+    font-size:17px;
+
+    line-height:1.5;
+
+    color:#ddd;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+
+
+/* ================= NEWS ================= */
+
+
+.latest-section{
+
+    padding:60px 5%;
+
+    background:#111;
+
+}
+
+
+
+.news-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:80px;
+
+}
+
+
+
+
+
+.news-card{
+
+    width:33%;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+.news-card img{
+
+    width:100%;
+
+    height:210px;
+
+    object-fit:cover;
+
+}
+
+.news-card h3{
+	
+	font-family:'Asap Condensed', sans-serif;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    padding:15px 12px 5px;
+
+}
+
+
+
+.news-card p{
+
+    padding:0 12px 20px;
+
+    font-size:14px;
+
+    color:#ddd;
+
+    line-height:1.4;
+
+}
+.statistics-section{
+
+    padding:30px 5%;
+    background:#111;
+
+}
+
+
+.stats-title{
+
+    text-align:center;
+    font-size:20px;
+    font-weight:700;
+	margin-bottom:15px;
+
+   
+}
+
+	
+
+.stats-container{
+
+    display:flex;
+    justify-content:space-between;
+    gap:35px;
+
+}
+
+
+.stat-box{
+
+    width:33.3%;
+    border:1px solid #333;
+    border-radius:8px;
+    padding:20px;
+    min-height:300px;
+
+
+}
+
+
+
+.stat-box h2{
+
+    font-size:20px;
+    font-weight:500;
+    font-family:"Asap Condensed", sans-serif;
+    margin-bottom:10px;
+	text-align:center;
+
+}
+
+
+.stat-box h2::after{
+
+    content:"";
+    display:inline-block;
+    width:100px;
+    height:3px;
+    background:#e10600;
+    margin-left:17px;
+    vertical-align:middle;
+
+}
+	
+/* ================= TEAMS SECTION ================= */
+
+
+.teams-section{
+
+    padding:80px 5%;
+    background:#111;
+    border-radius:8px;
+
+}
+
+
+.teams-line{
+
+    width:110px;
+    height:3px;
+    background:#e10600;
+    margin-bottom:10px;
+
+}
+
+
+.teams-desc{
+
+    font-size:16px;
+    color:#ddd;
+    margin-bottom:15px;
+	margin-top:12px;
+
+}
+
+
+.long-line{
+
+    width:100%;
+    height:3px;
+    background:#e10600;
+    margin-bottom:70px;
+	margin-top: 8px;
+
+}
+
+
+
+
+.teams-container{
+
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:40px 38px;
+
+}
+
+
+
+
+
+.team-card{
+
+    height:170px;
+
+    border-radius:7px;
+
+    padding:15px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+
+
+
+.team-drivers{
+    position:absolute;
+    top:69px;
+    left:14px;
+    width:calc(100% - 28px);
+
+    display:flex;
+    justify-content:space-between;
+    gap:9px;
+
+    font-family:'Arimo', Arial, sans-serif;
+    font-size:16px;
+    font-weight:549;
+    line-height:1.05;
+    text-align:center;
+}
+
+.team-drivers span{
+    width:50%;
+}
+
+.driver-line{
+    position:absolute;
+    top:110px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:125px;
+    height:10px;
+    margin:4;
+
+    border-left:2px solid white;
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+
+
+/* TEAM COLORS */
+
+
+.mclaren{
+
+background:linear-gradient(
+180deg,
+#3b2318,
+#ff6b00
+);
+
+}
+
+
+.mercedes{
+
+background:linear-gradient(
+180deg,
+#222,
+#00a19c
+);
+
+}
+
+
+.redbull{
+
+background:linear-gradient(
+180deg,
+#211744,
+#11158c
+);
+
+}
+
+
+.ferrari{
+
+background:linear-gradient(
+180deg,
+#401515,
+#e10600
+);
+
+}
+
+
+.williams{
+
+background:linear-gradient(
+180deg,
+#202040,
+#3030ff
+);
+
+}
+
+
+.racingbulls{
+
+background:linear-gradient(
+180deg,
+#26252c,
+#25304f
+);
+
+}
+
+
+.aston{
+
+background:linear-gradient(
+180deg,
+#173d38,
+#006f62
+);
+
+}
+
+
+.haas{
+
+background:linear-gradient(
+180deg,
+#353033,
+#aaa
+);
+
+}
+
+
+.sauber{
+
+background:linear-gradient(
+180deg,
+#1b3518,
+#00ff20
+);
+
+}
+
+
+.alpine{
+
+background:linear-gradient(
+180deg,
+#401c35,
+#ff0099
+);
+
+}
+
+
+
+.team-footer{
+
+    text-align:center;
+
+    margin-top:80px;
+
+    font-size:17px;
+
+    color:#ddd;
+
+    line-height:1.4;
+
+}
+
+
+
+.footer-line{
+
+    width:250px;
+
+    height:3px;
+
+    background:#e10600;
+
+    margin:25px auto 0;
+
+}
+	/* ================= TEAMS FIGMA FIX ================= */
+
+.teams-title{
+    font-family:Arial, sans-serif;
+    font-size:40px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:.5px;
+    line-height:1;
+}
+
+.teams-section{
+    padding:32px 4% 28px;
+}
+
+.teams-container{
+    gap:88px 38px;
+}
+
+
+.team-number{
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:26px;
+    font-weight:600;
+    letter-spacing:0.6px;
+}
+
+
+/* Fade gradient untuk semua team card */
+
+.team-card.mclaren{
+    background:linear-gradient(180deg, #211914 0%, #ff7000 100%);
+}
+
+.team-card.mercedes{
+    background:linear-gradient(180deg, #172928 0%, #00a89e 100%);
+}
+
+.team-card.redbull{
+    background:linear-gradient(180deg, #19152e 0%, #1711e8 100%);
+}
+
+.team-card.ferrari{
+    background:linear-gradient(180deg, #32191a 0%, #e40000 100%);
+}
+
+.team-card.williams{
+    background:linear-gradient(180deg, #1d1b36 0%, #3325ed 100%);
+}
+
+.team-card.racingbulls{
+    background:linear-gradient(180deg, #1b1b20 0%, #24355b 100%);
+}
+
+.team-card.aston{
+    background:linear-gradient(180deg, #18302d 0%, #008778 100%);
+}
+
+.team-card.haas{
+    background:linear-gradient(180deg, #2d2929 0%, #aaa3a3 100%);
+}
+
+.team-card.sauber{
+    background:linear-gradient(180deg, #173419 0%, #00e51a 100%);
+}
+
+.team-card.alpine{
+    background:linear-gradient(180deg, #3b1732 0%, #f000a7 100%);
+}
+/* TEAM CARD LEBIH NIPIS + LINE LEBIH ATAS */
+
+.team-card{
+    height:165px;
+}
+
+/* STANDING */
+
+
+.driver-row{
+
+display:flex;
+align-items:center;
+
+padding:8px 30px;
+margin-bottom:10px;
+
+font-size:18px;
+
+height:55px;
+
+}
+	
+.standing-head{
+
+display:flex;
+justify-content:space-between;
+
+font-size:18px;
+
+padding:0 18px 10px 45px;
+
+color:#ddd;
+
+}
+
+.rank{
+
+    width:25px;
+    font-size:20px;
+
+}
+
+
+
+.driver-row img{
+
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+
+
+.driver-name{
+
+    flex:1;
+    margin-left:15px;
+
+}
+
+
+
+.norris{
+
+    background:#4b2d0d;
+
+}
+
+
+.verstappen{
+
+    background:#11155f;
+
+}
+
+
+.piastri{
+
+    background:#4b2d0d;
+
+}
+
+
+/* SPEED CHART */
+
+.speed-row:first-of-type{
+    margin-top:45px;
+}
+.speed-row{
+
+    display:flex;
+    align-items:center;
+    margin:25px 0;
+justify-content:center;
+
+}
+
+
+.speed-name{
+
+    width:90px;
+    font-size:18px;
+
+}
+
+
+.bar{
+
+    height:35px;
+    width:220px;
+
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+
+}
+
+
+.bar img{
+
+    width:45px;
+    height:45px;
+    object-fit:contain;
+
+}
+
+
+
+.speed-value{
+
+    margin-left:10px;
+    font-size:16px;
+
+}
+
+
+
+.blue{
+
+    background:#001489;
+
+}
+
+
+.orange{
+
+    background:#ff8000;
+
+}
+
+
+
+
+
+.pie-container{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+margin-top:30px;
+
+}
+
+
+.pie{
+
+width:170px;
+height:170px;
+
+border-radius:50%;
+
+background:
+
+conic-gradient(
+#ff6b00 0% 67%,
+#e10600 67% 88%,
+#11158c 88% 100%
+);
+
+position:relative;
+
+}
+
+.percent{
+
+position:absolute;
+
+font-size:16px;
+font-weight:bold;
+color:white;
+
+}
+
+
+
+.percent-orange{
+
+position:absolute;
+
+top:60px;
+right:35px;
+
+}
+
+
+.percent-red{
+
+position:absolute;
+
+bottom:35px;
+left:65px;
+
+}
+
+
+.percent-blue{
+
+position:absolute;
+
+top:65px;
+left:50px;
+
+}
+
+
+.legend p{
+
+font-size:16px;
+margin:13px 0;
+
+}
+
+
+.legend span{
+
+    display:inline-block;
+    width:15px;
+    height:15px;
+    margin-right:20px;
+
+}
+
+.legend b{
+
+    margin-left:5px;
+    font-size:16px;
+
+}
+.mclaren{
+    background:#ff6b00;
+}
+
+
+.ferrari{
+    background:#e10600;
+}
+
+
+.redbull{
+    background:#11158c;
+}
+	
+	/* ================= CIRCUITS ================= */
+
+.circuit-section{
+
+    padding:70px 5%;
+    background:#111;
+
+}
+
+
+.circuit-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+}
+
+
+.circuit-title{
+
+    font-family:sans-serif;
+    font-size:40px;
+    font-style:italic;
+    font-weight:900;
+
+}
+
+
+.circuit-top-line{
+
+    width:115px;
+    height:3px;
+    background:#e10600;
+    margin-bottom:20px;
+
+}
+
+
+
+.circuit-desc{
+
+    width:300px;
+    font-size:15px;
+    line-height:1.4;
+    margin-top:10px;
+
+}
+
+
+.circuit-red-line{
+
+    height:3px;
+    background:#e10600;
+    margin:25px 0 35px;
+
+}
+
+
+
+
+.circuit-content{
+
+    display:flex;
+    gap:50px;
+
+}
+
+
+
+/* LEFT IMAGE */
+
+
+.circuit-image-box{
+
+    width:35%;
+    border:3px solid #ff6b00;
+    padding:15px;
+    border-radius:5px;
+
+}
+
+
+.circuit-image-box img{
+
+    width:100%;
+    height:450px;
+    object-fit:cover;
+
+}
+
+
+.circuit-text{
+
+    font-size:12px;
+    line-height:1.5;
+    margin-top:20px;
+
+}
+
+
+
+
+/* RIGHT LIST */
+
+
+.circuit-list{
+
+    width:65%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px 30px;
+
+}
+
+
+
+.track{
+
+    height:55px;
+    background:#eee;
+    color:#111;
+
+    display:flex;
+    align-items:center;
+
+    border-left:20px solid red;
+
+}
+
+
+
+.track-info{
+
+    padding-left:15px;
+    flex:1;
+
+}
+
+
+
+.track-name{
+
+    font-size:17px;
+    font-weight:900;
+    font-style:italic;
+
+}
+
+
+.country{
+
+    font-size:14px;
+
+}
+
+
+.distance{
+
+    border-left:1px solid #555;
+    padding:0 10px;
+
+    font-size:16px;
+    font-weight:bold;
+
+}
+
+
+
+/* COUNTRY COLORS */
+
+
+.uae{border-color:#00843d;}
+.austria{border-color:#ed1c24;}
+.australia{border-color:#11158c;}
+.azerbaijan{border-color:#00a6d6;}
+.bahrain{border-color:#ed1c24;}
+.belgium{border-color:#333;}
+.brazil{border-color:#009c3b;}
+.canada{border-color:#ff0000;}
+.china{border-color:#de2910;}
+.greatbritain{border-color:#003478;}
+.hungary{border-color:#4b8063;}
+.italy{border-color:#008c45;}
+.japan{border-color:#bc002d;}
+.mexico{border-color:#006847;}
+.monaco{border-color:#e00034;}
+.netherlands{border-color:#ae1c28;}
+.qatar{border-color:#8d153a;}
+.saudi{border-color:#006c35;}
+.singapore{border-color:#ef3340;}
+.spain{border-color:#aa151b;}
+.usa{border-color:#1b2a64;}
+	/* ================= CIRCUITS FIGMA FIX ================= */
+
+.circuit-section{
+    padding:25px 4.7% 45px;
+	margin-top:90px;
+}
+
+.circuit-title{
+    font-family:sans-serif;
+    font-size:40px;
+    font-weight:900;
+    font-style:italic;
+    line-height:1;
+}
+
+.circuit-top-line{
+    width:120px;
+    margin-bottom:25px;
+}
+
+.circuit-desc{
+    width:300px;
+    margin-top:0;
+    padding-left:28px;
+    font-size:16px;
+    line-height:1.25;
+    position:relative;
+	transform:translateY(25px);
+}
+
+.circuit-desc::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:3px;
+    height:60px;
+    background:#e10600;
+    transform:skewX(-15deg);
+}
+
+.circuit-red-line{
+    margin:26px 0 36px;
+}
+
+.circuit-content{
+    display:grid;
+    grid-template-columns:34% 1fr;
+    gap:50px;
+}
+
+.circuit-image-box{
+    width:100%;
+    padding:18px;
+    border:3px solid #ff7000;
+    border-radius:7px;
+	 margin-top:1px;
+}
+
+.circuit-image-box img{
+    height:543px;
+}
+
+.circuit-text{
+    font-size:15px;
+    line-height:1.50;
+    margin-top:5px;
+	letter-spacing:0.3px;
+}
+
+.circuit-list{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    grid-template-rows:repeat(10, 57px);
+    grid-auto-rows:57px;
+    gap:13px 30px;
+}
+
+.track{
+    height:57px;
+    border-left-width:23px;
+    overflow:hidden;
+}
+
+.track-info{
+    min-width:0;
+    padding-left:15px;
+}
+
+.track-name{
+    font-family:sans-serif;
+    font-size:21px;
+    font-weight:800;
+    font-style:italic;
+    line-height:1;
+    white-space:nowrap;
+}
+
+.country{
+    font-size:15px;
+    line-height:1.1;
+    white-space:nowrap;
+}
+
+.distance{
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:18px;
+    padding:0 9px;
+    white-space:nowrap;
+}
+
+
+/* SUSUNAN TRACK IKUT FIGMA */
+
+.track:nth-child(1){ grid-column:1; grid-row:1; }  /* Yas Marina */
+.track:nth-child(2){ grid-column:2; grid-row:1; }  /* Hungaroring */
+.track:nth-child(3){ grid-column:1; grid-row:2; }  /* Red Bull Ring */
+.track:nth-child(4){ grid-column:2; grid-row:2; }  /* Monza */
+.track:nth-child(5){ grid-column:1; grid-row:3; }  /* Albert Park */
+.track:nth-child(6){ grid-column:2; grid-row:3; }  /* Suzuka */
+.track:nth-child(7){ grid-column:1; grid-row:4; }  /* Baku */
+.track:nth-child(8){ grid-column:2; grid-row:4; }  /* Hermanos Rodriguez */
+.track:nth-child(9){ grid-column:1; grid-row:5; }  /* Bahrain */
+.track:nth-child(10){ grid-column:2; grid-row:5; } /* Monaco */
+.track:nth-child(11){ grid-column:1; grid-row:6; } /* Spa */
+.track:nth-child(12){ grid-column:2; grid-row:6; } /* Zandvoort */
+.track:nth-child(13){ grid-column:1; grid-row:7; } /* Interlagos */
+
+/* Selepas awak tambah Gilles-Villeneuve */
+
+.track:nth-child(14){ grid-column:1; grid-row:8; } /* Gilles-Villeneuve */
+.track:nth-child(15){ grid-column:2; grid-row:7; } /* Lusail */
+.track:nth-child(16){ grid-column:2; grid-row:8; } /* Jeddah */
+.track:nth-child(17){ grid-column:2; grid-row:9; } /* Marina Bay */
+.track:nth-child(18){ grid-column:1; grid-row:9; } /* Shanghai */
+.track:nth-child(19){ grid-column:2; grid-row:10; } /* Barcelona */
+.track:nth-child(20){ grid-column:1; grid-row:10; } /* Silverstone */
+
+.track:nth-child(21){ grid-column:3; grid-row:4; } /* Madrid */
+.track:nth-child(22){ grid-column:3; grid-row:5; } /* Miami */
+.track:nth-child(23){ grid-column:3; grid-row:6; } /* COTA */
+.track:nth-child(24){ grid-column:3; grid-row:7; } /* Las Vegas */
+
+	/* ================= CIRCUIT CARD SIZE FINAL ================= */
+
+.circuit-list{
+    grid-template-rows:repeat(10, 46px);
+    grid-auto-rows:46px;
+    gap:10px 30px;
+}
+
+.track{
+    height:46px;
+    border-left-width:22px;
+}
+
+.track-info{
+    padding-left:12px;
+	padding-right:5px;
+    overflow:hidden;
+}
+
+.track-name{
+    font-family: sans-serif;
+    font-size:13px;
+    font-weight:900;
+    line-height:1.50;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.country{
+    font-size:11px;
+    line-height:1;
+}
+
+.distance{
+    flex:0 0 60px;
+    margin-left:0;
+    padding:0 3px 0 3px;
+
+    border-left:1px solid #555;
+
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:14px;
+    font-weight:600;
+    text-align:left;
+    white-space:nowrap;
+	display:flex;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
+}
+
+/* Kotak gambar track ikut saiz Figma */
+
+.circuit-image-box img{
+    height:435px;
+}
+
+	/* ===================== GALLERY ===================== */
+
+.gallery-section{
+    background:#111;
+    padding:30px 5% 50px;
+    scroll-margin-top:70px;
+}
+
+.gallery-top-line{
+    width:120px;
+    height:3px;
+    background:#e10600;
+    margin-bottom:25px;
+}
+
+.gallery-main-title{
+    font-family: sans-serif;
+    font-size:50px;
+    font-style:italic;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:1px;
+    margin:0;
+}
+
+.gallery-long-line{
+    width:100%;
+    height:3px;
+    background:#e10600;
+    margin:28px 0 64px;
+}
+
+.gallery-intro{
+    max-width:1120px;
+    margin:0 auto 62px;
+    color:#f1f1f1;
+    font-size:17px;
+    line-height:1.3;
+    text-align:center;
+}
+
+/* Tajuk: HISTORY / BEYOND THE TRACK / F1 LEGENDS */
+
+.gallery-block{
+    padding:0 0 70px;
+}
+
+.gallery-block:last-child{
+    padding-bottom:0;
+}
+
+.gallery-block-title{
+    width:100%;
+    margin:0;
+    color:#fff;
+    font-family:'Be Vietnam Pro', Arial, sans-serif;
+    font-size:25px;
+    font-weight:800;
+    line-height:1.1;
+    text-align:center !important;
+}
+
+.gallery-block-line{
+    width:176px;
+    height:1.8px;
+    margin:10px auto 42px;
+    background:#e10600;
+}
+.history-line{
+    width:160px;
+}
+
+.beyond-line{
+    width:320px;
+}
+
+.legends-line{
+    width:200px;
+}
+/* Dua gambar besar atas */
+
+.gallery-feature-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    margin-bottom:70px;
+}
+
+.gallery-feature-image{
+    height:350px;
+    overflow:hidden;
+    border-radius:0;
+    background:#242424;
+}
+
+.gallery-feature-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* HISTORY dan F1 LEGENDS */
+
+.gallery-card-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:55px;
+    width:94%;
+    margin:0 auto;
+}
+
+.gallery-card{
+    overflow:hidden;
+    background:#111;
+    border:1px solid #2b2b2b;
+    border-radius:7px;
+}
+
+.gallery-card-image{
+    width:100%;
+    height:250px;
+    overflow:hidden;
+    background:#242424;
+}
+
+.gallery-card-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.gallery-card-content{
+    min-height:110px;
+    padding:14px 15px 12px;
+}
+
+.gallery-card h3{
+    margin:0 0 5px;
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:20.5px;
+    font-weight:700;
+    line-height:1;
+	letter-spacing: 1,7px;
+}
+
+.gallery-card p{
+    margin:0;
+    color:#f0f0f0;
+    font-size:16.5px;
+    line-height:1.18;
+}
+
+/* BEYOND THE TRACK */
+
+.beyond-grid{
+    display:grid;
+    grid-template-columns:1.34fr 1fr 1fr;
+    gap:35px;
+    width:81%;
+    max-width:1380px;
+    margin:0 auto;
+}
+
+.beyond-main-image,
+.beyond-small-image{
+    overflow:hidden;
+    background:#242424;
+    border:1px solid #2b2b2b;
+    border-radius:7px;
+}
+
+.beyond-main-image{
+    height:425px;
+}
+
+.beyond-column{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    gap:20px;
+}
+
+.beyond-small-image{
+    min-height:205px;
+}
+
+.beyond-main-image img,
+.beyond-small-image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+    .beyond-intro{
+    max-width:1090px;
+    margin:70px auto 0;
+    color:#f4f4f4;
+    font-size:17px;
+    font-weight:400;
+    line-height:1.25;
+    text-align:center;
+}
+
+.legends-text{
+    max-width:1090px;
+    margin:70px auto 0;
+    color:#f4f4f4;
+    font-size:17px;
+    font-weight:600;
+    line-height:1.25;
+    text-align:center;
+}
+	.beyond-intro{
+    max-width:1090px;
+    margin:70px auto 0;
+    color:#f4f4f4;
+    font-size:17px;
+    font-weight:400;
+    line-height:1.25;
+    text-align:center;
+}
+	/* ================= FOLLOW US FOOTER ================= */
+
+.follow-section{
+    width:100%;
+    height:204px;
+    margin-top:70px;
+    padding-top:43px;
+    background:#292929;
+    text-align:center;
+}
+
+.follow-section h2{
+    margin:0 0 20px;
+    color:#ffffff;
+    font-family:'Be Vietnam Pro', Arial, sans-serif;
+    font-size:23px;
+    font-weight:800;
+    line-height:1;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:33px;
+}
+
+.social-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:64px;
+    height:64px;
+    overflow:hidden;
+    background:#000000;
+	border-radius:5px;
+}
+
+.social-box img{
+    display:block;
+    width:39px;
+    height:39px;
+    object-fit:contain;
+	border-radius:4px;
+	text-decoration:none;
+}
+/* Telefon */
+
+@media(max-width:700px){
+
+    .gallery-section{
+        padding:35px 22px;
+    }
+
+    .gallery-main-title{
+        font-size:42px;
+    }
+
+    .gallery-feature-grid,
+    .gallery-card-grid,
+    .beyond-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+        width:100%;
+    }
+
+    .gallery-feature-image{
+        height:250px;
+    }
+
+    .gallery-card-image{
+        height:245px;
+    }
+
+    .beyond-main-image{
+        height:350px;
+    }
+
+    .beyond-column{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:none;
+        gap:15px;
+    }
+
+    .beyond-small-image{
+        min-height:170px;
+    }
+	}
+	.footer-bottom-space{
+    height:140px;
+    background:#111111;
+}
+	/* ===================== DRIVERS ===================== */
+
+.f1-drivers-section{
+    padding:34px 5% 42px;
+    background:#111;
+    scroll-margin-top:70px;
+}
+
+.f1-drivers-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.f1-drivers-top-line{
+    width:120px;
+    height:3px;
+    margin-bottom:27px;
+    background:#e10600;
+}
+
+.f1-drivers-title{
+    margin:0;
+    color:#fff;
+    font-family:sans-serif;
+    font-size:50px;
+    font-style:italic;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:1px;
+}
+
+.f1-drivers-desc{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    width:375px;
+    margin-top:5px;
+    color:#f1f1f1;
+    font-size:16px;
+    line-height:1.22;
+}
+
+.f1-drivers-slash{
+    width:3px;
+    height:60px;
+    flex:none;
+    background:#e10600;
+    transform:rotate(15deg);
+}
+
+.f1-drivers-long-line{
+    width:100%;
+    height:3px;
+    margin:27px 0 42px;
+    background:#e10600;
+}
+
+.f1-drivers-grid{
+    display:grid;
+    grid-template-columns:repeat(5, minmax(0, 1fr));
+    gap:22px;
+}
+
+.f1-driver-card{
+    --team:#ffffff;
+    height:350px;
+    overflow:hidden;
+    background:#111;
+    border:1px solid #363636;
+    border-radius:7px;
+}
+
+.f1-driver-main{
+    position:relative;
+    height:247px;
+    overflow:hidden;
+}
+
+.f1-driver-number{
+    position:absolute;
+    top:20px;
+    left:18px;
+    z-index:2;
+    color:#fff;
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:35px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.f1-driver-team-bar{
+    position:absolute;
+    top:105px;
+    left:18px;
+    width:74px;
+    height:7px;
+    background:linear-gradient(90deg, var(--team) 0%, var(--team) 55%, transparent 100%);
+}
+
+.f1-driver-info{
+    position:absolute;
+    bottom:31px;
+    left:18px;
+    z-index:2;
+}
+
+.f1-driver-name{
+    margin:0 0 12px;
+    color:#fff;
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:25px;
+    font-weight:550;
+    line-height:1;
+}
+
+.f1-driver-team{
+    margin:0;
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:.5px;
+    background:linear-gradient(90deg, var(--team) 0%, var(--team) 62%, transparent 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.f1-driver-photo{
+    position:absolute;
+    right:8px;
+    bottom:0;
+    z-index:1;
+    width:210px;
+    height:235px;
+}
+
+.f1-driver-photo img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:bottom right;
+}
+
+.f1-driver-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    height:103px;
+    border-top:1px solid #363636;
+}
+
+.f1-stat{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.f1-stat:first-child{
+    border-right:1px solid #363636;
+}
+
+.f1-stat span{
+    color:#f5f5f5;
+    font-family:Arial, sans-serif;
+    font-size:12px;
+	letter-spacing: 0.5px;
+	font-weight: 200px;
+}
+
+.f1-stat strong{
+    margin-top:8px;
+    color:#fff;
+    font-family:'Asap Condensed', Arial, sans-serif;
+    font-size:22px;
+    font-weight:500;
+}
+
+/* Warna + fade team */
+
+.redbull{ --team:#342bff; }
+.ferrari{ --team:#ff1a20; }
+.mclaren{ --team:#ff7817; }
+.mercedes{ --team:#00b8b0; }
+.aston{ --team:#008c78; }
+.williams{ --team:#5a4aff; }
+
+@media(max-width:1200px){
+    .f1-drivers-grid{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
+
+@media(max-width:700px){
+    .f1-drivers-header{
+        flex-direction:column;
+        gap:25px;
+    }
+
+    .f1-drivers-desc{
+        width:100%;
+    }
+
+    .f1-drivers-grid{
+        grid-template-columns:1fr;
+    }
+}
+	/* ================= DRIVER CARD FIGMA SIZE FIX ================= */
+
+.f1-drivers-section{
+    padding-left:4.6% !important;
+    padding-right:4.6% !important;
+}
+
+.f1-drivers-grid{
+    gap:22px !important;
+}
+
+.f1-driver-card{
+    height:330px !important;
+}
+
+.f1-driver-main{
+    height:227px !important;
+}
+
+.f1-driver-stats{
+    height:103px !important;
+}
+
+/* Semua nama team jadi fade ikut warna team */
+
+.f1-driver-team{
+    display:inline-block !important;
+    width:145px;
+   background:linear-gradient(
+    90deg,
+    var(--team) 0%,
+    var(--team) 18%,
+    #111111 52%,
+    #111111 82%
+) !important;
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    -webkit-text-fill-color:transparent !important;
+    color:transparent !important;
+}
+	/* Fade nama team ikut team sendiri */
+
+.f1-driver-card.redbull .f1-driver-team{
+    width:105px;
+    background:linear-gradient(90deg, #342bff 0%, #342bff 52%, #111 100%) !important;
+}
+
+.f1-driver-card.ferrari .f1-driver-team{
+    width:92px;
+    background:linear-gradient(90deg, #ff1a20 0%, #ff1a20 52%, #111 100%) !important;
+}
+
+.f1-driver-card.mclaren .f1-driver-team{
+    width:100px;
+    background:linear-gradient(90deg, #ff7817 0%, #ff7817 52%, #111 100%) !important;
+}
+
+.f1-driver-card.mercedes .f1-driver-team{
+    width:120px;
+    background:linear-gradient(90deg, #00b8b0 0%, #00b8b0 70%, #111 100%) !important;
+}
+
+.f1-driver-card.aston .f1-driver-team{
+    width:145px;
+    background:linear-gradient(90deg, #008c78 0%, #008c78 70%, #111 100%) !important;
+}
+
+.f1-driver-card.williams .f1-driver-team{
+    width:110px;
+    background:linear-gradient(90deg, #5a4aff 0%, #5a4aff 52%, #111 100%) !important;
+}
+	/* Betulkan gradient supaya masuk dalam tulisan, bukan jadi kotak */
+
+.f1-driver-card .f1-driver-team{
+    -webkit-background-clip:text !important;
+    background-clip:text !important;
+    -webkit-text-fill-color:transparent !important;
+    color:transparent !important;
+}
+	/* Fade hitam hujung nama team - versi stabil */
+
+#drivers .f1-driver-card .f1-driver-team{
+    position:relative !important;
+    display:inline-block !important;
+    width:fit-content !important;
+    overflow:hidden;
+    color:var(--team) !important;
+    background:none !important;
+    -webkit-text-fill-color:var(--team) !important;
+}
+
+#drivers .f1-driver-card .f1-driver-team::after{
+    content:"";
+    position:absolute;
+	
+	
+    top:0;
+    right:0;
+    width:35%;
+    height:100%;
+    background:linear-gradient(90deg, transparent 0%, #111111 100%);
+}
+
+/* Mercedes dan Aston fade dekat hujung sahaja */
+
+#drivers .f1-driver-card.mercedes .f1-driver-team::after,
+#drivers .f1-driver-card.aston .f1-driver-team::after{
+    width:22%;
+}
+	.f1-drivers-desc{
+    position:relative;
+    top:18px;   /* tambah nombor ini kalau nak lagi bawah */
+    left:35px;  /* tambah nombor ini kalau nak lagi kanan */
+}
+	#drivers{
+    margin-top:90px;
+}
+	#teams{
+    margin-top:90px;
+}
+	.championship-card{
+    cursor:pointer;
+}
+
+.championship-popup{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    padding:25px;
+    background:rgba(0,0,0,.78);
+    align-items:center;
+    justify-content:center;
+}
+
+.championship-popup.show{
+    display:flex;
+}
+
+.championship-popup-box{
+    position:relative;
+    width:min(720px, 100%);
+    max-height:85vh;
+    overflow-y:auto;
+    padding:42px;
+    border:1px solid #3a3a3a;
+    border-top:3px solid #e10600;
+    border-radius:8px;
+    background:#151515;
+    color:#fff;
+}
+
+.championship-popup-box h2{
+    margin:0 0 25px;
+    color:#fff;
+    font-family:sans-serif;
+    font-size:26px;
+    font-style:italic;
+}
+
+.championship-popup-box p{
+    margin:0 0 18px;
+    font-family:Arial, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    color:#ededed;
+}
+
+.championship-close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    border:0;
+    background:transparent;
+    color:#fff;
+    font-size:34px;
+    cursor:pointer;
+}
+	
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+Grid<span>X</span>
+
+</div>
+
+
+
+<div class="nav-links">
+
+<a href="#">HOME</a>
+
+<a href="#drivers">DRIVERS</a>
+
+<a href="#teams">TEAMS</a>
+
+<a href="#circuits">CIRCUITS</a>
+
+<a href="#gallery">GALLERY</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+
+THE WORLD OF<br>
+
+<span>FORMULA 1</span>
+
+</h1>
+
+
+
+<p>
+
+Speed. Precision. Legacy.<br>
+
+Explore the drivers, teams, and stories behind the world’s fastest sport.
+
+</p>
+
+
+
+<a href="#news" class="explore-btn">
+
+EXPLORE MORE
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+
+
+<!-- ================= LATEST NEWS ================= -->
+
+<section id="news" class="latest-section">
+
+
+<h2 class="section-title">
+LATEST NEWS
+</h2>
+
+
+<div class="red-line"></div>
+
+
+<div class="news-container">
+
+
+<div class="news-card championship-card" onclick="openChampionship()">
+
+    <img src="f1 LN 1.jpeg">
+
+    <h3>
+        Championship Battle Intensifies
+    </h3>
+
+    <p>
+        The title fight grows more competitive as the season enters its most crucial races.
+    </p>
+
+</div>
+
+
+
+<div class="news-card championship-card" onclick="openEngineering()">
+
+<img src="f1 LN 2.jpg">
+
+<h3>
+Engineering Behind Every Victory
+</h3>
+
+<p>
+Discover how continuous car development and innovative engineering shape race performance.
+</p>
+
+</div>
+
+
+<div class="news-card championship-card" onclick="openCircuitsNews()">
+<img src="f1 LN 3.jpg">
+
+<h3>
+Inside Formula 1’s Iconic Circuits
+</h3>
+
+<p>
+Explore the world’s most legendary tracks and the unique challenges they present to every driver.
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= SEASON INSIGHT ================= -->
+
+
+<section class="season-section">
+
+
+<h2 class="section-title">
+SEASON INSIGHT
+</h2>
+
+
+<div class="red-line"></div>
+
+
+
+<div class="season-card">
+
+
+<div class="season-image">
+
+<img src="f1 insight 1.jpg">
+
+</div>
+
+
+
+<div class="season-text">
+
+<h1>
+2026 SEASON INSIGHT
+</h1>
+
+
+<p>
+The 2026 Formula 1 season marks a new chapter in the world of motorsport, bringing together speed, innovation, and fierce competition. With talented drivers, advanced engineering, and strategic battles across every Grand Prix, each race showcases the dedication and precision required at the highest level of racing.
+</p>
+
+
+<p>
+From breakthrough performances to unforgettable moments, the season continues to shape the future of Formula 1.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+	
+	<!-- ================= STATISTICS ================= -->
+
+
+<section class="statistics-section">
+
+
+<h1 class="stats-title">
+STATISTICS
+</h1>
+
+
+
+<div class="stats-container">
+
+
+
+<!-- CHAMPIONSHIP STANDING -->
+
+
+<div class="stat-box">
+
+
+<h2>
+CHAMPIONSHIP STANDINGS
+</h2>
+
+<div class="standing-head">
+
+<div>
+Drivers
+</div>
+
+<div>
+Points
+</div>
+
+</div>
+<div class="driver-row norris">
+
+<div class="rank">
+1.
+</div>
+
+<img src="lando.jpg">
+
+<div class="driver-name">
+Norris (NOR)
+</div>
+
+<div>
+423
+</div>
+
+</div>
+
+
+
+<div class="driver-row verstappen">
+
+<div class="rank">
+2.
+</div>
+
+<img src="max.jpg">
+
+<div class="driver-name">
+Verstappen (VER)
+</div>
+
+<div>
+421
+</div>
+
+</div>
+
+
+
+
+<div class="driver-row piastri">
+
+<div class="rank">
+3.
+</div>
+
+<img src="piastri.jpg">
+
+<div class="driver-name">
+Piastri (PIA)
+</div>
+
+<div>
+410
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- HIGHEST SPEED -->
+
+
+<div class="stat-box">
+
+
+<h2>
+HIGHEST SPEED ACHIEVEMENT
+</h2>
+
+
+
+<div class="speed-row">
+
+<div class="speed-name">
+Williams
+</div>
+
+
+<div class="bar blue">
+
+<img src="w-removebg-preview.png">
+
+</div>
+
+
+<div class="speed-value">
+342.7 KM/H
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="speed-row">
+
+<div class="speed-name">
+McLaren
+</div>
+
+
+<div class="bar orange">
+
+<img src="ml-removebg-preview.png">
+
+</div>
+
+
+<div class="speed-value">
+342.0 KM/H
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="speed-row">
+
+<div class="speed-name">
+Red Bull
+</div>
+
+
+<div class="bar blue">
+
+<img src="r-removebg-preview.png">
+
+</div>
+
+
+<div class="speed-value">
+341.8 KM/H
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- VICTORY DISTRIBUTION -->
+
+
+<div class="stat-box">
+
+
+<h2>
+TEAM VICTORY DISTRIBUTION
+</h2>
+
+
+
+<div class="pie-container">
+
+
+<div class="pie">
+
+</div>
+
+
+
+<div class="legend">
+
+<p>
+<span class="mclaren"></span>
+McLaren
+<b>67%</b>
+</p>
+
+
+<p>
+<span class="ferrari"></span>
+Ferrari
+<b>21%</b>
+</p>
+
+
+<p>
+<span class="redbull"></span>
+Red Bull
+<b>12%</b>
+</p>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+<section id="drivers" class="f1-drivers-section">
+
+    <div class="f1-drivers-header">
+
+        <div>
+            <div class="f1-drivers-top-line"></div>
+            <h2 class="f1-drivers-title">DRIVERS</h2>
+        </div>
+
+        <div class="f1-drivers-desc">
+            <div class="f1-drivers-slash"></div>
+
+            <div>
+                Pushing the boundaries of human<br>
+                performance, these drivers define<br>
+                the pinnacle of motorsport.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="f1-drivers-long-line"></div>
+
+    <div class="f1-drivers-grid">
+
+        <!-- 01 -->
+        <article class="f1-driver-card redbull">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">01</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">M. VERSTAPPEN</h3>
+                    <p class="f1-driver-team">RED BULL</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                  <img src="f1_max-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>71</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>4</strong></div>
+            </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="f1-driver-card ferrari">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">02</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">L. HAMILTON</h3>
+                    <p class="f1-driver-team">FERRARI</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                   <img src="f1_lewis-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>106</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>7</strong></div>
+            </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="f1-driver-card mclaren">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">03</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">L. NORRIS</h3>
+                    <p class="f1-driver-team">MCLAREN</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                   <img src="f1_lando-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>11</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>1</strong></div>
+            </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="f1-driver-card ferrari">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">04</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">C. LECLERC</h3>
+                    <p class="f1-driver-team">FERRARI</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                   <img src="f1_leclerc-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>8</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="f1-driver-card mclaren">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">05</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">O. PIASTRI</h3>
+                    <p class="f1-driver-team">MCLAREN</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                    <img src="f1_piastri-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>9</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="f1-driver-card mercedes">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">06</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">G. RUSSELL</h3>
+                    <p class="f1-driver-team">MERCEDES</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                    <img src="f1_russell-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>4</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+        <!-- 07 -->
+        <article class="f1-driver-card mercedes">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">07</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">K. ANTONELLI</h3>
+                    <p class="f1-driver-team">MERCEDES</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                    <img src="f1_kimi-removebg-preview (1).png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>6</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+        <!-- 08 -->
+        <article class="f1-driver-card aston">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">08</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">F. ALONSO</h3>
+                    <p class="f1-driver-team">ASTON MARTIN</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                    <img src="f1_alonso-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>32</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>2</strong></div>
+            </div>
+        </article>
+
+        <!-- 09 -->
+        <article class="f1-driver-card williams">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">09</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">C. SAINZ</h3>
+                    <p class="f1-driver-team">WILLIAMS</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                    <img src="f1_Carlos-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>4</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="f1-driver-card williams">
+            <div class="f1-driver-main">
+                <div class="f1-driver-number">10</div>
+                <div class="f1-driver-team-bar"></div>
+
+                <div class="f1-driver-info">
+                    <h3 class="f1-driver-name">A. ALBON</h3>
+                    <p class="f1-driver-team">WILLIAMS</p>
+                </div>
+
+                <div class="f1-driver-photo">
+                   <img src="f1_alex-removebg-preview.png" alt="M. Verstappen">
+                </div>
+            </div>
+
+            <div class="f1-driver-stats">
+                <div class="f1-stat"><span>RACE WINS</span><strong>0</strong></div>
+                <div class="f1-stat"><span>CHAMPIONSHIPS</span><strong>0</strong></div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+	
+	<!-- ================= TEAMS ================= -->
+
+
+<section id="teams" class="teams-section">
+
+
+<div class="teams-line"></div>
+
+
+<h1 class="teams-title">
+TEAMS
+</h1>
+
+
+<p class="teams-desc">
+Meet the teams shaping the future of Formula 1
+</p>
+
+
+<div class="long-line"></div>
+
+
+
+<div class="teams-container">
+
+
+
+<div class="team-card mclaren">
+
+<div class="team-number">
+01 | MCLAREN
+</div>
+
+<div class="team-drivers">
+
+<span>
+LANDO<br>NORRIS
+</span>
+
+<span>
+OSCAR<br>PIASTRI
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+<div class="team-card mercedes">
+
+<div class="team-number">
+02 | MERCEDES
+</div>
+
+<div class="team-drivers">
+
+<span>
+GEORGE<br>RUSSELL
+</span>
+
+<span>
+KIMI<br>ANTONELLI
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+<div class="team-card redbull">
+
+<div class="team-number">
+03 | RED BULL
+</div>
+
+<div class="team-drivers">
+
+<span>
+MAX<br>VERSTAPPEN
+</span>
+
+<span>
+ISACK<br>HADJAR
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+<div class="team-card ferrari">
+
+<div class="team-number">
+04 | FERRARI
+</div>
+
+<div class="team-drivers">
+
+<span>
+LEWIS<br>HAMILTON
+</span>
+
+<span>
+CHARLES<br>LECLERC
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+<div class="team-card williams">
+
+<div class="team-number">
+05 | WILLIAMS
+</div>
+
+<div class="team-drivers">
+
+<span>
+CARLOS<br>SAINZ
+</span>
+
+<span>
+ALEX<br>ALBON
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+
+<div class="team-card racingbulls">
+
+<div class="team-number">
+06 | RACING BULLS
+</div>
+
+<div class="team-drivers">
+
+<span>
+LIAM<br>LAWSON
+</span>
+
+<span>
+ARVID<br>LINDBLAD
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+
+<div class="team-card aston">
+
+<div class="team-number">
+07 | ASTON MARTIN
+</div>
+
+<div class="team-drivers">
+
+<span>
+FERNANDO<br>ALONSO
+</span>
+
+<span>
+LANCE<br>STROLL
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+
+<div class="team-card haas">
+
+<div class="team-number">
+08 | HAAS
+</div>
+
+<div class="team-drivers">
+
+<span>
+ESTEBAN<br>OCON
+</span>
+
+<span>
+OLIVER<br>BEARMAN
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+
+<div class="team-card sauber">
+
+<div class="team-number">
+09 | KICK SAUBER
+</div>
+
+<div class="team-drivers">
+
+<span>
+NICO<br>HULKENBERG
+</span>
+
+<span>
+GABRIEL<br>BORTOLETO
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+
+
+<div class="team-card alpine">
+
+<div class="team-number">
+10 | ALPINE
+</div>
+
+<div class="team-drivers">
+
+<span>
+PIERRE<br>GASLY
+</span>
+
+<span>
+VALTTERI<br>BOTTAS
+</span>
+
+</div>
+
+<div class="driver-line"></div>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="team-footer">
+
+Every Formula 1 team combines talented drivers, experienced engineers, and advanced technology to deliver outstanding performance on the track.<br>
+
+Throughout the 2026 season, each team competes with one goal in mindfighting for victory, earning valuable championship points,<br>
+
+and leaving their mark on the pinnacle of motorsport.
+
+</div>
+
+
+<div class="footer-line"></div>
+
+
+
+</section>
+
+<!-- ================= CIRCUITS ================= -->
+
+
+<section id="circuits" class="circuit-section">
+
+
+<div class="circuit-header">
+
+
+<div>
+
+<div class="circuit-top-line"></div>
+
+<h1 class="circuit-title">
+CIRCUITS
+</h1>
+
+
+</div>
+
+
+<p class="circuit-desc">
+
+  Every Formula 1 circuit brings unique  challenges, combining speed, precision, and strategy
+
+</p>
+
+
+</div>
+
+
+
+<div class="circuit-red-line"></div>
+
+
+
+<div class="circuit-content">
+
+
+
+<div class="circuit-image-box">
+
+
+<img src="f1 circuit.jpeg">
+
+
+<p class="circuit-text">
+
+Twenty-four circuits, one championship. Every track brings its own history, character, and challenge to the Formula 1 season, testing the limits of both drivers and teams throughout every race weekend.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="circuit-list">
+
+
+
+<div class="track uae">
+<div class="track-info">
+<div class="track-name">YAS MARINA</div>
+<div class="country">Abu Dhabi</div>
+</div>
+<div class="distance">5.281KM</div>
+</div>
+
+
+
+<div class="track hungary">
+<div class="track-info">
+<div class="track-name">HUNGARORING</div>
+<div class="country">Hungary</div>
+</div>
+<div class="distance">4.381KM</div>
+</div>
+
+
+
+
+<div class="track austria">
+<div class="track-info">
+<div class="track-name">RED BULL RACING</div>
+<div class="country">Austria</div>
+</div>
+<div class="distance">4.318KM</div>
+</div>
+
+
+
+<div class="track italy">
+<div class="track-info">
+<div class="track-name">MONZA</div>
+<div class="country">Italy</div>
+</div>
+<div class="distance">5.793KM</div>
+</div>
+
+
+
+
+<div class="track australia">
+<div class="track-info">
+<div class="track-name">ALBERT PARK</div>
+<div class="country">Australia</div>
+</div>
+<div class="distance">5.278KM</div>
+</div>
+
+
+
+
+<div class="track japan">
+<div class="track-info">
+<div class="track-name">SUZUKA</div>
+<div class="country">Japan</div>
+</div>
+<div class="distance">5.807KM</div>
+</div>
+
+
+
+
+<div class="track azerbaijan">
+<div class="track-info">
+<div class="track-name">BAKU CITY</div>
+<div class="country">Azerbaijan</div>
+</div>
+<div class="distance">6.003KM</div>
+</div>
+
+
+
+<div class="track mexico">
+<div class="track-info">
+<div class="track-name">HERMANOS RODRÍGUEZ</div>
+<div class="country">Mexico</div>
+</div>
+<div class="distance">4.304KM</div>
+</div>
+
+
+
+
+<div class="track bahrain">
+<div class="track-info">
+<div class="track-name">BAHRAIN</div>
+<div class="country">Bahrain</div>
+</div>
+<div class="distance">5.412KM</div>
+</div>
+
+
+
+
+<div class="track monaco">
+<div class="track-info">
+<div class="track-name">DE MONACO</div>
+<div class="country">Monaco</div>
+</div>
+<div class="distance">3.337KM</div>
+</div>
+
+
+
+
+<div class="track belgium">
+<div class="track-info">
+<div class="track-name">SPA-FRANCORCHAMPS</div>
+<div class="country">Belgium</div>
+</div>
+<div class="distance">7.004KM</div>
+</div>
+
+
+
+
+<div class="track netherlands">
+<div class="track-info">
+<div class="track-name">ZANDVOORT</div>
+<div class="country">Netherlands</div>
+</div>
+<div class="distance">4.259KM</div>
+</div>
+
+
+
+
+<div class="track brazil">
+<div class="track-info">
+<div class="track-name">INTERLAGOS</div>
+<div class="country">Brazil</div>
+</div>
+<div class="distance">4.309KM</div>
+</div>
+
+<div class="track canada">
+    <div class="track-info">
+        <div class="track-name">GILLES-VILLENEUVE</div>
+        <div class="country">Canada</div>
+    </div>
+
+    <div class="distance">4.361KM</div>
+</div>
+
+
+<div class="track qatar">
+<div class="track-info">
+<div class="track-name">LUSAIL</div>
+<div class="country">Qatar</div>
+</div>
+<div class="distance">5.419KM</div>
+</div>
+
+
+
+<div class="track saudi">
+<div class="track-info">
+<div class="track-name">JEDDAH CORNICHE</div>
+<div class="country">Saudi Arabia</div>
+</div>
+<div class="distance">6.174KM</div>
+</div>
+
+
+
+<div class="track singapore">
+<div class="track-info">
+<div class="track-name">MARINA BAY</div>
+<div class="country">Singapore</div>
+</div>
+<div class="distance">4.940KM</div>
+</div>
+
+
+
+<div class="track china">
+<div class="track-info">
+<div class="track-name">SHANGHAI</div>
+<div class="country">China</div>
+</div>
+<div class="distance">5.451KM</div>
+</div>
+
+
+
+
+<div class="track spain">
+<div class="track-info">
+<div class="track-name">BARCELONA</div>
+<div class="country">Spain</div>
+</div>
+<div class="distance">4.657KM</div>
+</div>
+
+
+
+
+<div class="track greatbritain">
+<div class="track-info">
+<div class="track-name">SILVERSTONE</div>
+<div class="country">Great Britain</div>
+</div>
+<div class="distance">5.891KM</div>
+</div>
+
+
+
+
+<div class="track spain">
+<div class="track-info">
+<div class="track-name">MADRID STREET</div>
+<div class="country">Spain</div>
+</div>
+<div class="distance">5.474KM</div>
+</div>
+
+
+
+
+<div class="track usa">
+<div class="track-info">
+<div class="track-name">MIAMI AUTODROME</div>
+<div class="country">United States</div>
+</div>
+<div class="distance">5.412KM</div>
+</div>
+
+
+
+<div class="track usa">
+<div class="track-info">
+<div class="track-name">COTA</div>
+<div class="country">United States</div>
+</div>
+<div class="distance">5.513KM</div>
+</div>
+
+
+
+
+<div class="track usa">
+<div class="track-info">
+<div class="track-name">LAS VEGAS</div>
+<div class="country">United States</div>
+</div>
+<div class="distance">6.201KM</div>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ================= GALLERY TITLE ================= -->
+
+<section id="gallery" class="gallery-section">
+
+    <div class="gallery-top-line"></div>
+
+    <h1 class="gallery-main-title">GALLERY</h1>
+
+    <div class="gallery-long-line"></div>
+
+    <p class="gallery-intro">
+        A visual journey through Formula 1’s greatest moments, from legendary races to modern<br>
+        day achievements, showcasing the iconic drivers, historic battles, and unforgettable memories that continue to define the sport.
+    </p>
+
+    <div class="gallery-feature-grid">
+
+        <div class="gallery-feature-image">
+            <img src="c9176e00-dad4-4f18-9f5f-d28a42c686a5.jpg" alt="Formula 1 race">
+        </div>
+
+        <div class="gallery-feature-image">
+            <img src="f1 g.jpeg" alt="Formula 1 podium">
+        </div>
+
+    </div>
+
+
+    <!-- ================= HISTORY ================= -->
+
+    <section class="gallery-block">
+
+       <h2 class="gallery-block-title" style="font-size:25px !important;">HISTORY</h2>
+       
+		<!-- HISTORY -->
+<div class="gallery-block-line history-line"></div>
+
+<!-- BEYOND -->
+        <div class="gallery-card-grid">
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="f1 old 1.jpg" alt="Golden Era of Formula 1">
+                </div>
+
+                <div class="gallery-card-content">
+                    <h3>The Golden Era of Formula 1</h3>
+
+                    <p>
+                        A glimpse into the early days of Formula 1, where legendary machines
+                        and fearless drivers defined the spirit of racing.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="f1 old 2.jpg" alt="Japan Grand Prix 1997">
+                </div>
+
+                <div class="gallery-card-content">
+                    <h3>Japan Grand Prix 1997</h3>
+
+                    <p>
+                        One of Formula 1’s most memorable moments, capturing the emotion
+                        and excitement of a legendary championship battle.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="f1 old 3.jpg" alt="Ayrton Senna">
+                </div>
+
+                <div class="gallery-card-content">
+                    <h3>Ayrton Senna’s Incident</h3>
+
+                    <p>
+                        A tragic moment in Formula 1 history that marked the loss of a legend
+                        and forever changed the world of motorsport.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+    <!-- ================= BEYOND THE TRACK ================= -->
+
+    <section class="gallery-block">
+
+       <h2 class="gallery-block-title" style="font-size:25px !important;">BEYOND THE TRACK</h2>
+		<div class="gallery-block-line beyond-line"></div>
+
+        <div class="beyond-grid">
+
+            <div class="beyond-main-image">
+                <img src="f1 bts 5.jpg" alt="Formula 1 garage">
+            </div>
+
+            <div class="beyond-column">
+
+                <div class="beyond-small-image">
+                    <img src="f1 bts 1.webp" alt="Formula 1 pit crew">
+                </div>
+
+                <div class="beyond-small-image">
+                    <img src="F1 bts 6.jpg" alt="Formula 1 paddock">
+                </div>
+
+            </div>
+
+            <div class="beyond-column">
+
+                <div class="beyond-small-image">
+                    <img src="f1 bts 3.jpg" alt="Formula 1 team">
+                </div>
+
+                <div class="beyond-small-image">
+                    <img src="f1 bts 4.jpg" alt="Formula 1 control room">
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="beyond-intro">
+    Behind every Formula 1 race is a dedicated team working tirelessly behind the scenes.
+    From the garage to the pit lane, every detail, decision, and second plays a crucial role
+    in creating an unforgettable race weekend.
+</p>
+    </section>
+
+
+    <!-- ================= F1 LEGENDS ================= -->
+
+    <section class="gallery-block">
+
+        <h2 class="gallery-block-title" style="font-size:25px !important;">F1 LEGENDS</h2>
+		<div class="gallery-block-line legends-line"></div>
+
+        <div class="gallery-card-grid">
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="michael.jpg" alt="Michael Schumacher">
+                </div>
+
+                <div class="gallery-card-content">
+
+                    <h3>Michael  Schumacher</h3>
+
+                    <p>
+                        A seven-time Formula 1 World Champion with 91 race wins, Michael
+                        Schumacher redefined excellence through his dominance, consistency,
+                        and legendary success with Ferrari.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="f1 win 3.jpg" alt="Ayrton Senna">
+                </div>
+
+                <div class="gallery-card-content">
+
+                    <h3>Ayrton Senna</h3>
+
+                    <p>
+                        A three-time Formula 1 World Champion remembered for his exceptional
+                        talent, fearless driving style, and unforgettable legacy in Formula 1.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="gallery-card">
+
+                <div class="gallery-card-image">
+                    <img src="lewis.jpg" alt="Lewis Hamilton">
+                </div>
+
+                <div class="gallery-card-content">
+
+                    <h3>Lewis  Hamilton</h3>
+
+                    <p>
+                        A seven-time Formula 1 World Champion with a record 105 race wins,
+                        Lewis Hamilton has become one of the most successful and influential
+                        drivers in the history of the sport.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+      <p class="legends-text">
+            Every image in this gallery captures a unique chapter of Formula 1, from historic
+            victories and legendary drivers to the dedication behind every race, preserving the
+            moments that continue to inspire fans across generations.
+        </p>
+
+ </section>
+
+   
+</section>
+<footer class="follow-section">
+
+    <h2>FOLLOW US</h2>
+
+    <div class="social-icons">
+
+       <a href="https://www.instagram.com/theer4h/" target="_blank" class="social-box">
+    <img src="ig.jpg" alt="Instagram">
+</a>
+
+<a href="https://www.tiktok.com/@theer4h" target="_blank" class="social-box">
+    <img src="tiktok.jpg" alt="TikTok">
+</a>
+
+<a href="https://www.threads.net/@theer4h" target="_blank" class="social-box">
+    <img src="threads.jpg" alt="Threads">
+</a>
+    </div>
+
+</footer>
+	<div class="footer-bottom-space"></div>
+	<div class="championship-popup" id="championshipPopup">
+    <div class="championship-popup-box">
+        <button class="championship-close" onclick="closeChampionship()">×</button>
+
+        <h2>CHAMPIONSHIP BATTLE INTENSIFIES</h2>
+
+        <p>
+            The Formula 1 championship battle has become increasingly competitive as the season progresses. Every race now carries significant importance, with only a small gap separating the leading drivers in the standings. Teams continue to introduce upgrades and refine their race strategies, making every qualifying session and Grand Prix more unpredictable than ever before.
+        </p>
+
+        <p>
+            As the title fight enters its decisive stage, consistency has become just as important as outright speed. A single mistake, mechanical issue, or poor strategy call could dramatically change the championship standings. Fans around the world eagerly follow each race, knowing that every point earned could determine who will ultimately lift the World Championship trophy.
+        </p>
+    </div>
+</div>
+	<script>
+function openChampionship(){
+    document.getElementById("championshipPopup").classList.add("show");
+}
+
+function closeChampionship(){
+    document.getElementById("championshipPopup").classList.remove("show");
+}
+		function openEngineering(){
+    document.getElementById("engineeringPopup").classList.add("show");
+}
+
+function closeEngineering(){
+    document.getElementById("engineeringPopup").classList.remove("show");
+}
+		function openCircuitsNews(){
+    document.getElementById("circuitsNewsPopup").classList.add("show");
+}
+
+function closeCircuitsNews(){
+    document.getElementById("circuitsNewsPopup").classList.remove("show");
+}
+</script>
+	<div class="championship-popup" id="engineeringPopup">
+    <div class="championship-popup-box">
+        <button class="championship-close" onclick="closeEngineering()">×</button>
+
+        <h2>ENGINEERING BEHIND EVERY VICTORY</h2>
+
+        <p>
+            Behind every Formula 1 victory lies years of innovation, precision, and engineering excellence. Every component of an F1 car, from its aerodynamic front wing to the powerful hybrid power unit, is carefully designed to maximize speed while maintaining stability and reliability. Engineers constantly analyze data collected throughout every lap to improve performance.
+        </p>
+
+        <p>
+            Success on the track is never achieved by the driver alone. Hundreds of engineers, mechanics, strategists, and technicians work together throughout the race weekend to ensure the car performs at its absolute best. Their teamwork allows drivers to push the limits with confidence while competing against the world’s fastest racing teams.
+        </p>
+    </div>
+</div>
+	<div class="championship-popup" id="circuitsNewsPopup">
+    <div class="championship-popup-box">
+        <button class="championship-close" onclick="closeCircuitsNews()">×</button>
+
+        <h2>INSIDE FORMULA 1’S ICONIC CIRCUITS</h2>
+
+        <p>
+            Formula 1 travels across the globe, visiting some of the most legendary racing circuits in motorsport history. Tracks such as Monaco, Silverstone, Suzuka, and Monza each present unique layouts, demanding different driving techniques and race strategies. These circuits have hosted unforgettable moments that continue to shape Formula 1 history.
+        </p>
+
+        <p>
+            Every circuit challenges drivers in its own way through high-speed straights, technical corners, elevation changes, and unpredictable weather conditions. Mastering these iconic venues requires exceptional skill, experience, and concentration. Their rich heritage and passionate fans make each Grand Prix a memorable event for competitors and spectators alike.
+        </p>
+    </div>
+</div>
+</body>
+</html>
